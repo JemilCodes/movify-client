@@ -4,8 +4,8 @@ import Swiper from "../../UI/SwiperComp";
 
 const Home = ({
   noMovie,
-  queriesdata,
-  searched,
+  feedback,
+  setFeedback,
   setCurrentMovie,
   searchResult,
   setRoute,
@@ -18,19 +18,13 @@ const Home = ({
       } ${showQuery && "!z-[-1]"}`}
     >
       <p className=" text-white text-2xl text-center font-extrabold">
-        {!queriesdata
-          ? "You have no search query"
-          : searched
-          ? "These are your search result"
-          : noMovie
-          ? "No movies to show"
-          : "Movies from your last five searches"}
-        {}
+        {feedback}
       </p>
       <Swiper
         searchResult={searchResult}
         setCurrentMovie={setCurrentMovie}
         setRoute={setRoute}
+        setFeedback={setFeedback}
       />
     </div>
   );

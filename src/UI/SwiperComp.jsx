@@ -14,7 +14,12 @@ import { EffectCards } from "swiper/modules";
 import axios from "axios";
 import { baseUrl } from "../network/baseUrl";
 
-export default function App({ searchResult, setCurrentMovie, setRoute }) {
+export default function App({
+  searchResult,
+  setCurrentMovie,
+  setFeedback,
+  setRoute,
+}) {
   const swiperRef = useRef(null);
 
   useEffect(() => {
@@ -30,11 +35,18 @@ export default function App({ searchResult, setCurrentMovie, setRoute }) {
   };
 
   const handleDetails = async (payload) => {
-    const data = await axios.post(`${baseUrl}/getSingle`, {
-      Title: searchResult[payload].Title,
-    });
-    setCurrentMovie(data.data);
-    setRoute("details");
+    setFeedback("Checking...");
+    try {
+      const data = await axios.post(`${baseUrl}/getSingle`, {
+        Title: searchResult[payload].Title,
+      });
+      setFeedback("Here are your search result");
+      setCurrentMovie(data.data);
+      setRoute("details");
+    } catch (error) {
+      setRoute("details");
+      setFeedback("Server is not responding, try again");
+    }
   };
 
   return (
