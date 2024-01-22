@@ -22,6 +22,10 @@ function App() {
   //Getting the Last five queries
   let queriesdata = JSON.parse(localStorage.getItem("queries"));
 
+  if (!Array.isArray(queriesdata)) {
+    queriesdata = [];
+  }
+
   useEffect(() => {
     const getMovies = async () => {
       // Check if queriesdata is an array before trying to iterate
