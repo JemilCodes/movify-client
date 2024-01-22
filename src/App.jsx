@@ -17,8 +17,6 @@ function App() {
 
   const [route, setRoute] = useState("home");
 
-  console.log(currentMovie);
-
   let noMovie = searchResult.length === 0;
 
   //Getting the Last five queries
