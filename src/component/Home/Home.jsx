@@ -12,8 +12,10 @@ const Home = ({
   showQuery,
   changeBanner,
 }) => {
-  document.querySelector(".banner").style.backgroundImage =
-    "url('movify-client/banner.jpg')";
+  if (document && document?.querySelector(".banner")) {
+    document.querySelector(".banner").style.backgroundImage =
+      "url('movify-client/banner.jpg')";
+  }
   return (
     <div
       className={` relative rounded-lg w-full lg:w-[50%] flex flex-col gap-4 items-center swiperCont p-2 ${
