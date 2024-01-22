@@ -17,7 +17,7 @@ function App() {
 
   const [route, setRoute] = useState("home");
 
-  let noMovie = searchResult.length === 0;
+  let noMovie = searchResult?.length === 0;
 
   //Getting the Last five queries
   let queriesdata = JSON.parse(localStorage.getItem("queries"));
@@ -38,9 +38,25 @@ function App() {
       for (const queryResultItem of queriesdata) {
         try {
           const data = await axios.post(`${baseUrl}/search`, {
-            query: queryResultItem,
+            // making sure it only string
+            query: queryResultItem.toString().trim(),
           });
-          setSearchResult((prev) => [...prev, ...data.data.Search]);
+          console.log(data.data.Search);
+          setSearchResult((prev) => {
+            const newSearchResults = data?.data?.Search;
+
+            // Check if newSearchResults is defined and is an array
+            if (Array.isArray(newSearchResults)) {
+              return [...prev, ...newSearchResults];
+            } else {
+              // Handle the case where newSearchResults is not iterable
+              // console.error(
+              //   "Search results are not iterable:",
+              //   newSearchResults
+              // );
+              return prev; // or handle it in a different way based on your requirements
+            }
+          });
         } catch (error) {
           // Handle errors here
           console.error(error);
@@ -53,7 +69,7 @@ function App() {
   function addToLatestQueries(newQueries) {
     // Check if queriesdata is an array before trying to use array methods
     if (!Array.isArray(queriesdata)) {
-      console.error("queriesdata is not an array");
+      // console.error("queriesdata is not an array");
       return [];
     }
 
