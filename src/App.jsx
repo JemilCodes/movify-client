@@ -90,7 +90,7 @@ function App() {
       // style={{
       //   background: `url(${currentMovie?.Poster}) no-repeat center/cover`,
       // }}
-      className="banner w-full min-h-screen p-5 md:pl-10 md:pr-10 flex flex-col "
+      className="banner w-full h-screen p-5 md:pl-10 md:pr-10 flex flex-col  "
     >
       {/* Navbar */}
       <div className=" flex justify-between items-center top-0 left-0 right-0 sticky">
@@ -139,7 +139,7 @@ function App() {
         </div>
       </div>
       {/* Content */}
-      <div className=" mt-[50px]  w-full flex justify-center items-center flex-1 gap-7">
+      <div className=" w-full h-full flex items-center justify-center">
         {route === "home" ? (
           <Home
             noMovie={noMovie}

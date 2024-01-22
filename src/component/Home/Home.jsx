@@ -17,7 +17,7 @@ const Home = ({
         noMovie && "skeleton-loader"
       } ${showQuery && "!z-[-1]"}`}
     >
-      <p className=" text-white text-2xl font-extrabold">
+      <p className=" text-white text-2xl text-center font-extrabold">
         {!queriesdata
           ? "You have no search query"
           : searched

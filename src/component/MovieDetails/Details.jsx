@@ -5,8 +5,7 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 const Details = ({ showQuery, noMovie, setRoute, currentMovie }) => {
   return (
     <div
-      onClick={() => setRoute("home")}
-      className={`w-full lg:w-[80%] min-h-[200px] rounded-lg  flex flex-col gap-4 p-2 bg-transparent queryCont niceBorder ${
+      className={`w-full lg:w-[60%] h-[60%] rounded-lg overflow-y-scroll  flex flex-col gap-4 p-4 bg-transparent queryCont niceBorder ${
         showQuery && "z-[-1]"
       }`}
     >
