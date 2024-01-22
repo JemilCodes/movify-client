@@ -12,7 +12,11 @@ const Details = ({ showQuery, noMovie, setRoute, currentMovie }) => {
       <div className=" flex justify-between items-center">
         <p className=" text-lg  text-white">Movie Details..</p>
         <div
-          onClick={() => setRoute("home")}
+          onClick={() => {
+            document.querySelector(".banner").style.backgroundImage =
+              "url('movify-client/banner.jpg')";
+            setRoute("home");
+          }}
           className=" rounded-full p-1 center bg-white"
         >
           <MdKeyboardDoubleArrowRight className=" cursor-pointer w-[20px] h-[20px]" />

@@ -1,9 +1,9 @@
 .logo {
-  letter-spacing: 7px;
+  letter-spacing: 5px;
 }
 
 .queryCont {
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
 }
 .blur {
   backdrop-filter: blur(10px);
@@ -28,7 +28,7 @@
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  transition: 0.5s;
+  transition: 1.5s;
 }
 
 .banner::before {

@@ -16,7 +16,10 @@ function App() {
   const [feedback, setFeedback] = useState("No Movies to show");
 
   var banner = document.querySelector(".banner");
-  console.log(banner);
+
+  function changeBanner(url) {
+    banner.style.backgroundImage = "url(" + url + ")";
+  }
 
   const [route, setRoute] = useState("home");
 
@@ -143,7 +146,7 @@ function App() {
       {/* Navbar */}
       <div className=" flex justify-between items-center top-0 left-0 right-0 sticky">
         {/* logo */}
-        <h1 className=" hidden md:block text-white text-3xl font-extrabold logo">
+        <h1 className=" hidden md:block text-white text-xl font-extrabold logo">
           MOVIFY
         </h1>
         {/* searchbar Cont */}
@@ -198,6 +201,7 @@ function App() {
             searchResult={searchResult}
             setRoute={setRoute}
             showQuery={showQuery}
+            changeBanner={changeBanner}
           />
         ) : (
           <Details

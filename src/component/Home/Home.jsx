@@ -10,6 +10,7 @@ const Home = ({
   searchResult,
   setRoute,
   showQuery,
+  changeBanner,
 }) => {
   return (
     <div
@@ -25,6 +26,7 @@ const Home = ({
         setCurrentMovie={setCurrentMovie}
         setRoute={setRoute}
         setFeedback={setFeedback}
+        changeBanner={changeBanner}
       />
     </div>
   );

@@ -19,6 +19,7 @@ export default function App({
   setCurrentMovie,
   setFeedback,
   setRoute,
+  changeBanner,
 }) {
   const swiperRef = useRef(null);
 
@@ -40,8 +41,9 @@ export default function App({
       const data = await axios.post(`${baseUrl}/getSingle`, {
         Title: searchResult[payload].Title,
       });
+      changeBanner(data?.data?.Poster);
       setFeedback("Here are your search result");
-      setCurrentMovie(data.data);
+      setCurrentMovie(data?.data);
       setRoute("details");
     } catch (error) {
       setRoute("details");
