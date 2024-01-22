@@ -14,7 +14,7 @@ const Home = ({
 }) => {
   if (document && document?.querySelector(".banner")) {
     document.querySelector(".banner").style.backgroundImage =
-      "url('movify-client/banner.jpg')";
+      "url('/banner.jpg')";
   }
   return (
     <div
