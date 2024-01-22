@@ -36,7 +36,7 @@ The project structure is organized as follows:
 ## Start command 
 1. npm run dev
 
-Features
-Search Movies: Enter keywords to search for movies.
-Latest Queries: Displays the last five search queries.
-View Movie Details: Click on a movie to view detailed information.
+## Features
+- `Search Movies /`: Enter keywords to search for movies.
+- `Latest Queries/`: Displays the last five search queries.
+- `View Movie Details/`: Click on a movie to view detailed information.
