@@ -71,6 +71,7 @@ function App() {
   }
 
   const handleSearch = async (payload) => {
+    payload.trim();
     setSearchResult([]);
     setSearchInput("");
     setShowQuery(false);
