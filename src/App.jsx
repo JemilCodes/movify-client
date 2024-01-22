@@ -99,7 +99,18 @@ function App() {
       query: payload,
     });
     setSearched(true);
-    setSearchResult(data.data.Search);
+    setSearchResult((prev) => {
+      const newSearchResults = data?.data?.Search;
+
+      // Check if newSearchResults is defined and is an array
+      if (Array.isArray(newSearchResults)) {
+        return newSearchResults;
+      } else {
+        // Handle the case where newSearchResults is not iterable
+        // console.error("Search results are not iterable:", newSearchResults);
+        return prev; // or handle it in a different way based on your requirements
+      }
+    });
   };
 
   return (
