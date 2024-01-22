@@ -47,6 +47,12 @@ function App() {
   }, []);
 
   function addToLatestQueries(newQueries) {
+    // Check if queriesdata is an array before trying to use array methods
+    if (!Array.isArray(queriesdata)) {
+      console.error("queriesdata is not an array");
+      return [];
+    }
+
     // Remove the existing string if it already exists
     let queriesdataFiltered = queriesdata.filter((str) => str !== newQueries);
 
