@@ -24,6 +24,12 @@ function App() {
 
   useEffect(() => {
     const getMovies = async () => {
+      // Check if queriesdata is an array before trying to iterate
+      if (!Array.isArray(queriesdata)) {
+        // console.log("queriesdata is not an array");
+        return;
+      }
+
       // getting last five query result
       for (const queryResultItem of queriesdata) {
         try {
