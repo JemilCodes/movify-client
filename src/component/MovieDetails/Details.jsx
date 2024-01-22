@@ -13,8 +13,6 @@ const Details = ({ showQuery, noMovie, setRoute, currentMovie }) => {
         <p className=" text-lg  text-white">Movie Details..</p>
         <div
           onClick={() => {
-            document.querySelector(".banner").style.backgroundImage =
-              "url('movify-client/banner.jpg')";
             setRoute("home");
           }}
           className=" rounded-full p-1 center bg-white"

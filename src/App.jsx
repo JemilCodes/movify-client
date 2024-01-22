@@ -118,6 +118,7 @@ function App() {
         setSearchResult([]);
         return;
       }
+      setRoute("home");
       setFeedback("Here are your search result");
       setSearchResult((prev) => {
         const newSearchResults = data?.data?.Search;
