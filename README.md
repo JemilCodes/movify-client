@@ -1,8 +1,42 @@
-# React + Vite
+# Movify React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Movify React App! This application allows users to search for movies and view details about them.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [Setup](#setup)
+- [Running the App](#running-the-app)
+- [Features](#features)
+- [Contributing](#contributing)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
+This React app provides a user-friendly interface to search for movies and access their details. It uses the Movify API for fetching movie data.
+
+## Project Structure
+The project structure is organized as follows:
+- `src/`: Contains the source code of the React app.
+  - `App.css`: Stylesheet for the app.
+  - `App.js`: Main component that integrates various components.
+  - `component/`: Directory containing different components.
+    - `Home/`: Home component for displaying movie search results.
+    - `MovieDetails/`: Component for displaying details about a selected movie.
+  - `network/`: Directory for network-related configurations.
+    - `baseUrl.js`: File containing the base URL for API requests.
+
+## Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/movify-react-app.git
+   cd movify-react-app
+   
+## Install dependencies
+1. npm install
+
+## Start command 
+1. npm run dev
+
+Features
+Search Movies: Enter keywords to search for movies.
+Latest Queries: Displays the last five search queries.
+View Movie Details: Click on a movie to view detailed information.
