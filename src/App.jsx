@@ -9,6 +9,12 @@ import Home from "./component/Home/Home";
 import Details from "./component/MovieDetails/Details";
 
 function App() {
+  useEffect(() => {
+    if (document && document?.querySelector(".banner")) {
+      document.querySelector(".banner").style.backgroundImage =
+        "url('https://movify-api.onrender.com/banner.jpg')";
+    }
+  }, []);
   const [showQuery, setShowQuery] = useState(false);
   const [searchResult, setSearchResult] = useState([]);
   const [searchInput, setSearchInput] = useState("");

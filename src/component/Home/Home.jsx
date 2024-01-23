@@ -16,7 +16,7 @@ const Home = ({
 }) => {
   if (document && document?.querySelector(".banner")) {
     document.querySelector(".banner").style.backgroundImage =
-      "url('movify-client/banner.jpg')";
+      "url('https://movify-api.onrender.com/banner.jpg')";
   }
 
   const [view, setView] = useState(true);

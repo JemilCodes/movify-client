@@ -24,7 +24,6 @@
 
 .banner {
   position: relative;
-  background: url("/banner.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   overflow: hidden;
