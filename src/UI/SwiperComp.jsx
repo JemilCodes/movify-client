@@ -46,7 +46,6 @@ export default function App({
       setCurrentMovie(data?.data);
       setRoute("details");
     } catch (error) {
-      setRoute("details");
       setFeedback("Server is not responding, try again");
     }
   };
