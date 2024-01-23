@@ -6,7 +6,7 @@ Welcome to the Movify React App! This application allows users to search for mov
 - [Overview](#overview)
 - [Project Structure](#project-structure)
 - [Setup](#setup)
-- [Running the App](#running-the-app)
+- [Running the App](#Running-the-App)
 - [Features](#features)
 - [Contributing](#contributing)
 
@@ -33,7 +33,7 @@ The project structure is organized as follows:
 ## Install dependencies
 1. npm install
 
-## Start command 
+## Running the App
 1. npm run dev
 
 ## Features
