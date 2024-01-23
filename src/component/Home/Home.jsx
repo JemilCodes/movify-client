@@ -4,6 +4,7 @@ import Swiper from "../../UI/SwiperComp";
 import { BsFillGridFill } from "react-icons/bs";
 import { MdSwipeRight } from "react-icons/md";
 import { baseUrl } from "../../network/baseUrl";
+import axios from "axios";
 
 const Home = ({
   noMovie,
@@ -23,6 +24,7 @@ const Home = ({
   const [view, setView] = useState(true);
 
   const handleDetails = async (payload) => {
+    console.log(payload);
     setFeedback("Checking...");
     try {
       const data = await axios.post(`${baseUrl}/getSingle`, {
@@ -33,6 +35,7 @@ const Home = ({
       setCurrentMovie(data?.data);
       setRoute("details");
     } catch (error) {
+      console.log(error);
       setFeedback("Server is not responding, try again");
     }
   };
