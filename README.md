@@ -40,3 +40,8 @@ The project structure is organized as follows:
 - `Search Movies /`: Enter keywords to search for movies.
 - `Latest Queries/`: Displays the last five search queries.
 - `View Movie Details/`: Click on a movie to view detailed information.
+- `Change View/`: You can Change the View Style of the Display either to Swipe or Grid View.
+- `Tinder Like Swipeable Card/`: The (swipe view) allow to swipe between the movie smoothly just by double tapping and dragging either to the left or right on desktop view but on mobile view you only need to swipe to your desired direction.
+- `Grid View/`: (Grid view) allow you to easily glance through the movie collection.
+
+
