@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Swiper from "../../UI/SwiperComp";
 import { BsFillGridFill } from "react-icons/bs";
 import { MdSwipeRight } from "react-icons/md";
+import { baseUrl } from "../../network/baseUrl";
 
 const Home = ({
   noMovie,
